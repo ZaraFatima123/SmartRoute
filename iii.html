@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route and AQI Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .input-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-container input, .input-container button {
+            padding: 10px;
+            margin: 5px;
+        }
+        #aqi-info {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <h1>Route Finder and AQI Checker</h1>
+        <input type="text" id="start" placeholder="Enter start location" />
+        <input type="text" id="end" placeholder="Enter end location" />
+        <button id="submit">Find Route</button>
+        <div id="route-info"></div>
+    </div>
+    <div id="map"></div>
+    <div id="aqi-info"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="am.js"></script>    
+    <!-- // The am.js file gives AQI values as 1,2,3,4,5
+    // The ax.js file gives precise AQI values as 147,130,345 but the data has not been verified. --> -->
+
+</body>
+</html>
